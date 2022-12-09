@@ -1,13 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
-    "target": "es5",
-    "lib": [
-      "es5",
-      "dom",
-      "scripthost",
-      "es2015.symbol"
-    ]
+    "baseUrl": "src"
   },
   "include": [
     "src"
