@@ -38,6 +38,13 @@ export const ImageGallery = ({ query, page, images, onFetchImages }) => {
         );
         onFetchImages(results);
         response.hits.length < response.total && setLoadingMore(true);
+        if (response.hits.length < 12 && response.hits.length > 0) {
+          setLoadingMore(false);
+          toast.info(
+            'Oops! Out of images :('
+          );
+        } 
+        
       } catch (error) {
         toast.error(`${error.message}`);
       } finally {
